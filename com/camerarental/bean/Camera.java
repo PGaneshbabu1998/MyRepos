@@ -1,12 +1,14 @@
 package com.camerarental.bean;
 
 public class Camera {
+	//camera properties
 	private int id;
 	private String brand;
 	private String model;
 	private float perDayPrice;
 	private String status;
-
+	
+	//camera properties getter and setter methods
 	public String getStatus() {
 		return status;
 	}
@@ -37,9 +39,13 @@ public class Camera {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
+	//parameter less constructor
 	public Camera() {
 		super();
 	}
+	
+	//parameterized constructor
 	public Camera(String brand, String model, float perDayPrice, int id, String status) {
 		super();
 		this.brand = brand;
@@ -49,10 +55,10 @@ public class Camera {
 		this.status = status;
 	}
 	
+	//Overriding toString method
 	@Override
 	public String toString() {
-		return "id="+ id+", brand=" + brand + ", model=" + model + ", perDayPrice=" + perDayPrice + ", status="
-				+ status +"";
+		return "   "+ id+"                  " + brand + "              " + model + "               " + perDayPrice + "                "+ status;
 	}
 
 }
